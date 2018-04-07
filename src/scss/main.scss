@@ -1,0 +1,43 @@
+@import "partials/params";
+@import "partials/mixins";
+
+html {
+  background-color: #282828;
+}
+
+body {
+  @include clear;
+  @include center;
+  width: 1170px;
+  background-color: $white; 
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 120%;
+  box-sizing: 0 0 10px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  @include clear;
+}
+
+a {
+  text-decoration: none;
+}
+
+.view-port {
+  width: $view-port;
+  @include center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+

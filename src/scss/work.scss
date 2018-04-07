@@ -1,0 +1,115 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.work {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 44px;
+	padding-bottom: 52px;
+	background-color: $green;
+
+	&__title {
+		position: relative;
+		font-size: 20px;
+		line-height: 20px;
+		text-transform: uppercase;
+		color: $gray;
+		margin-bottom: 25px;
+
+		&::after {
+			@include pseudo;
+			top: 30px;
+			left: 70px;
+			width: 43px;
+			height: 2px;
+			background-color: $gray;
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 56px;
+		color: $gray;
+	}
+
+	&__buttons {
+		width: 280px;
+		height: 30px;
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 59px;
+		border-radius: 15px;
+	}
+
+	&__button {
+		flex-grow: 1;
+		background-color: $white;
+		color: $green;
+		border-color: $darkgreen;
+		transition: background-color, .5s,
+								color, .5s;
+
+		&:first-child {
+			border-top-left-radius: 15px;
+			border-bottom-left-radius: 15px; 
+			border-right: none;
+		}
+
+		&:last-child {
+			border-top-right-radius: 15px;
+			border-bottom-right-radius: 15px; 
+			border-left: none;
+		}
+
+		&--active,
+		&:hover,
+		&:focus {
+			background-color: $darkgreen;
+			color: $white;
+		}
+	}
+
+	&__photo {
+		@include center;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: space-between;
+		width: 920px;
+		height: 350px;
+		margin-bottom: 57px;
+	}
+
+	&__img {
+		transition: box-shadow, .5s;
+		&:hover,
+		&:focus {
+			box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
+		}
+	}
+
+	&__link {
+		position: relative;
+		padding: 11px 43px 11px 22px;
+		background-color: $darkgreen;
+		color: $white;
+		font-size: 18px;
+		line-height: 18px;
+		border-radius: 20px;
+		transition: background-color, 0.5s;
+		
+		&:hover,
+		&:focus {
+			background-color: #087208;
+		}
+
+		&::after {
+			@include pseudo;
+			top: 15px;
+			right: 15px;
+			width: 15px;
+			height: 10px;
+			background: url(img/photo-icon.png) no-repeat;
+		}
+	}
+}

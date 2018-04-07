@@ -1,0 +1,75 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.do {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	color: $gray;
+	padding-top: 44px;
+	padding-bottom: 75px;
+
+	&__title {
+		position: relative;
+		font-size: 20px;
+		line-height: 20px;
+		text-transform: uppercase;
+
+		&::after {
+			@include pseudo;
+			top: 30px;
+			left: 40px;
+			width: 43px;
+			height: 2px;
+			background-color: $gray;
+		}
+	}
+
+	&__subtitle {
+		color: $lightgray;
+		margin-top: 30px;
+		margin-bottom: 75px;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		@include clear-list;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		width: 350px;
+		height: 335px;
+	}
+
+	&__img {
+
+	}
+
+	&__title--list {
+		font-size: 24px;
+		line-height: 24px;
+	}
+
+	&__text {
+		text-align: center;
+	}
+
+	&__link {
+		padding: 6px 14px;
+		color: $white;
+		border-radius: 15px;
+		background-color: $green;
+		transition: background-color, 0.5s;
+
+		&:hover,
+		&:focus {
+			background-color: #087208;
+		}
+	}
+}

@@ -1,0 +1,63 @@
+@mixin clear {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin clear-list {
+  @include clear;
+  list-style: none;
+}
+
+@mixin center {
+	margin: 0 auto;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin flex($justify-content: space-between, $align-items: center) {
+	display: flex;
+	justify-content: $justify-content;
+	align-items: $align-items;
+}
+
+@mixin text($size: 15px, $height: 120%, $weight: 400) {
+	font-size: $size;
+	line-height: $height;
+	font-weight: $weight;
+}
+
+@mixin social {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 85px;
+	height: 30px;
+	border-radius: 15px;
+	background-color: #c5e9c5;
+	font-size: 0;
+
+	& .ball {
+		display: block;
+		width: 20px;
+		height: 20px;
+		background: url(img/ball.png) no-repeat;
+	}
+
+	& .fb {
+		display: block;
+		width: 20px;
+		height: 20px;
+		background: url(img/f.png) no-repeat;
+	}
+
+	& .twitter {
+		display: block;
+		width: 20px;
+		height: 20px;
+		background: url(img/twitter.png) no-repeat;
+	}
+}

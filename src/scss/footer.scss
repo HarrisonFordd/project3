@@ -1,0 +1,218 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.footer {
+	background-color: $footer-bg;
+}
+
+.footer-content {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 32px;
+	padding-bottom: 32px;
+}
+
+.about-us {
+	width: 320px;
+	text-align: center;
+	color: #ccc;
+
+	&__title {
+		position: relative;
+		font-size: 16px;
+		line-height: 16px;
+		text-transform: uppercase;
+		margin-bottom: 35px;
+
+		&::after {
+			@include pseudo;
+			top: 30px;
+			left: 135px;
+			width: 43px;
+			height: 2px;
+			background-color: $gray;
+		}
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 120%;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	&__social {
+		@include center;
+		@include social;
+	}
+}
+
+.posts {
+		width: 320px;
+		color: #ccc;
+		text-align: center;
+
+	&__title {
+		position: relative;
+		font-size: 16px;
+		line-height: 16px;
+		text-transform: uppercase;
+		margin-bottom: 35px;
+
+		&::after {
+			@include pseudo;
+			top: 30px;
+			left: 135px;
+			width: 43px;
+			height: 2px;
+			background-color: $gray;
+		}
+	}
+
+	&__content {
+		display: flex;
+	}
+
+	&__link {
+
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 120%;
+		text-align: left;
+		padding-left: 10px;
+
+		& span {
+			font-size: 12px;
+			padding: 2px;
+			border-radius: 3px;
+		}
+	}
+}
+
+.contacts {
+	width: 320px;
+	text-align: center;
+	color: #ccc;
+
+	&__title {
+		position: relative;
+		font-size: 16px;
+		line-height: 16px;
+		text-transform: uppercase;
+		margin-bottom: 35px;
+
+		&::after {
+			@include pseudo;
+			top: 30px;
+			left: 135px;
+			width: 43px;
+			height: 2px;
+			background-color: $gray;
+		}
+	}
+
+	&__address {
+		font-size: 16px;
+		line-height: 120%;
+		text-align: center;
+		margin-bottom: 25px;
+	}
+
+	&__form {
+		
+		& input {
+			width: 100%;
+			margin-bottom: 3px;
+			padding: 5px;
+			background-color: #444;
+			border: none;
+		}
+
+		& input[type='submit'] {
+			padding: 10px;
+			background-color: $green;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+			color: $white;
+			transition: background-color, 0.5s;
+
+			&:hover,
+			&:focus {
+				background-color: #087208;
+			}
+		}
+
+		& textarea {
+			width: 100%;
+			padding: 5px;
+			background-color: #444;
+			border: none;
+		}
+	}
+}
+
+.green {
+	background-color: $green;
+}
+
+.orange {
+	background-color: $orange;
+}
+
+.blue {
+	background-color: $blue;
+}
+
+.red {
+	background-color: $red;
+}
+
+.footer-seen {
+	background-color: #222;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+	&__title {
+		position: relative;
+		font-size: 16px;
+		line-height: 16px;
+		text-transform: uppercase;
+		margin-bottom: 35px;
+		color: $black;
+
+		&::after {
+			@include pseudo;
+			top: 30px;
+			left: 560px;
+			width: 43px;
+			height: 2px;
+			background-color: $black;
+		}
+	}
+
+	&__list {
+		@include clear-list;
+		display: flex;
+		justify-content: space-around;
+	}
+}
+
+.footer-copyright {
+	position: relative;
+	padding: 10px;
+	background-color: $black;
+	text-align: center;
+	color: $white;
+
+	&::after {
+		@include pseudo;
+		top: 13px;
+		left: 575px;
+		width: 15px;
+		height: 15px;
+		background: url(img/heart.png) no-repeat center;
+	}
+}
